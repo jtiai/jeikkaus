@@ -1,0 +1,31 @@
+{% extends "jeikkaus/base.html" %}
+{% load i18n %}
+{% block content %}
+<div class='textarea'>
+<table summary="gamelist">
+	<tr><th>{% trans "Match" %}</th><th>{% trans "Closing time" %}</th><th>&nbsp;</th></tr>
+	{% for match in matchlist %}
+	<tr>
+		<td>{{ match.title }}</td>
+		<td>
+			{% if match.is_open %}
+			 {{ g.closing_time|date:"d.m.Y H:i" }}
+			{% else %}
+			 {{ match.score }}
+			{% endif %}
+		</td>
+		<td>
+			{% if match.is_open %}
+			<a href="{% url guessmatch match.id %}">{{ match.get_guess_for_user|default_if_none:"x - x" }}</a>
+			{% else %}
+			{{ match.get_guess_for_user|default_if_none:"x - x" }}
+			{% endif %}
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+</div>
+<br/>
+<div id="headeri"></div>
+{% endblock %}
+

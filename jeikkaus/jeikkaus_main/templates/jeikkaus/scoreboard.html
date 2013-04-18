@@ -1,0 +1,43 @@
+{% extends "jeikkaus/base.html" %}
+{% load i18n %}
+{% block content %}
+<div class='textarea'>
+<table>
+	<thead>
+		<tr>
+		<td>&nbsp;</td><td>&nbsp;</td>	
+            {% for user, points in scoreboard.users %}
+            <th>{{ user.first_name }} {{ user.last_name }}</th><td>&nbsp;</td>
+            {% endfor %}
+		</tr>
+		<tr>
+			<td>{% trans "Match" %}</td>
+			<td>{% trans "Result" %}</td>
+            {% for user in scoreboard.users %}
+            <td>&nbsp;</td><td>&nbsp;</td>
+            {% endfor %}
+		</tr>
+	</thead>
+	<tbody>
+        {% for match in scoreboard.matches %}
+		<tr>
+            <th>{{ match.0.title }}</th>
+            <th>{{ match.0.score }}</th>
+            {% for g in match.1 %}
+            <td>{{ g }}</td><td>{{ g.points }}</td>
+			{% endfor %}			
+		</tr>
+        {% endfor %}		
+	</tbody>
+	<tfoot>
+		<td>{% trans "Total" %}</td><td>&nbsp;</td>
+		{% for user, points in scoreboard.users %}
+		<td>&nbsp;</td><td>{{ points }}</td>
+		{% endfor %} 
+	</tfoot>
+</table>
+</div>
+<br/>
+<div id="footeri"></div>
+{% endblock %}
+

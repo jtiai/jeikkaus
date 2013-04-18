@@ -1,0 +1,215 @@
+body {
+-x-system-font:none;
+background:#2B2E34 url(../img/bg-body.gif) repeat-x scroll left top;
+color:#CCCCCC;
+font-family:Arial,Helvetica,Geneva,"Nimbus Sans L",sans-serif;
+font-size:75%;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+height:100%;
+line-height:1.35em;
+margin:0;
+min-height:100%;
+padding:0;
+text-align:center;
+}
+
+
+.errorlist {
+line-height:20px;
+width:700px;
+display: block;
+font-weight:bold;
+}
+
+#login {
+background-color: #2B2E34;
+color: #CCCCCC;
+border: 1px solid #777777;
+font-size: 12px;
+padding: 0px 20px 10px 10px;
+}
+
+label {
+width: 200px;
+display: block;
+margin-top:10px;
+font-weight:bold;
+}
+
+.submit input {
+color: #000;
+margin-top:10px;
+background: #CCCCCC;
+border: 2px outset #888684;
+width:145px;
+font-weight:bold;
+} 
+
+.textarea {
+background-color: #2B2E34;
+color: #CCCCCC;
+border: 1px solid #777777;
+padding:10px;
+overflow:auto;
+}
+.content {
+font-family:Arial,Helvetica,Geneva,"Nimbus Sans L",sans-serif;
+font-size:12px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+}
+
+a, a:visited {
+color:#CCCCCC;
+text-decoration:none;
+font-family:"Trebuchet MS",Arial,Helvetica,Geneva,"Nimbus Sans L",sans-serif;
+font-size:1em;
+font-weight:bold;
+text-decoration:none;
+text-transform:uppercase;
+}
+a:hover {
+text-decoration:underline;
+}
+
+a img {
+border:0 none;
+}
+
+
+
+div#container {
+background:#000 none repeat scroll 0 0;
+border-left:1px solid #2F2F2F;
+border-right:1px solid #2F2F2F;
+height:auto !important;
+margin:0 auto;
+min-height:100%;
+text-align:left;
+width:784px;
+
+}
+
+ul {
+border-left:0 none;
+line-height:20px;
+padding:0 11px;
+position:relative;
+display:block;
+float:left;
+height:36px;
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+div#topmenu li {
+border-left:1px solid #C2332C;
+border-right:1px solid #4D0600;
+cursor:pointer;
+float:left;
+height:35px;
+margin-right:1px;
+width:auto;
+padding:0px 11px;
+line-height:32px;
+}
+
+div#loginmenu li {
+cursor:pointer;
+float:left;
+height:30px;
+margin-right:1px;
+padding:0px 11px;
+width:auto;
+position:relative;
+top: 6px;
+line-height:30px;
+}
+
+.first {
+background:#C30F00 none repeat scroll 0 0;
+cursor:pointer;
+float:left;
+height:35px;
+margin-right:1px;
+padding:0px 0px 0;
+border-left:1px solid #B2F9FF;
+border-right:1px solid #3DCCD3;
+width:119px;
+}
+
+
+.second{
+background:#000000 none repeat scroll 0 0;
+border-color:#25292D #25292D #000;
+border-style:solid;
+border-width:1px;
+float:left;
+line-height:30px;
+padding:0 11px;
+position:relative;
+
+}
+
+
+div#topmenu {
+background:#C30F00;
+left:1px;
+position:relative;
+top:0;
+height:36px;
+width:782px;
+z-index:100;
+}
+
+div#loginmenu {
+background:url(../img/bg-nav-sub-games.gif);
+left:1px;
+position:relative;
+top:0;
+height:38px;
+width:782px;
+z-index:100;
+}
+
+
+div#headeri {
+background:url(../img/Jeikka4.png);
+
+
+margin:0 auto;
+min-height:100%;
+text-align:left;
+height:199px;
+width:764px;
+}
+
+div#contentti {
+
+padding:0px 10px 4px;
+background-color:#000;
+margin:0 auto;
+min-height:100%;
+text-align:left;
+height:auto;
+width:764px;
+}
+
+div#footeri{
+background:url(../img/jeikka5.png);
+
+margin:0 auto;
+min-height:100%;
+text-align:left;
+height:199px;
+width:764px;
+}
+
