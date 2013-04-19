@@ -1,0 +1,57 @@
+{% load i18n %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Jeikkaus</title>
+		<link rel="stylesheet" href="{{ STATIC_URL }}css/jeikkaus.css" type="text/css" />
+		{% block extra_head %}{% endblock %}
+	</head>
+	<body class="jeikkaus">
+	
+		<div id="container">
+			<div id="topmenu">
+				<div id="header" class="header">
+					<ul>		
+						{% block header %}
+						{% if user.is_authenticated %}
+						<li class="first">
+							<a href="{% url "match_list" %}" id="index" class="link"><img height="33" border="0" width="119" alt="Jeikkaus" src="{{ STATIC_URL }}img/logo.png"/></a>
+						</li>
+						<li>
+							<a href="{% url "scoreboard" %}" id="scoreboard" class="link">{% trans "Scoreboard" %}</a>
+						</li>
+						<li>
+							<a href="{% url "logout" %}" id="logout" class="link">{% trans "Logout" %}</a>
+						</li>
+						<li>
+							<a href="{% url "change_password" %}" id="change_password" class="link">{% trans "Change password" %}</a>
+						</li>
+						{% endif %}
+						{% endblock %}
+					</ul>		
+				</div>
+			</div>
+
+			<div id="loginmenu">
+				<ul>
+					<li class="second">
+						<a id="logo" title="www.jeikkaus.fi" href="{% url "match_list" %}">
+							Etusivu
+						</a>
+					</li>
+					<li>"Mist&auml; n&auml;it&auml; senttej&auml; oikein tulee?" - Tuntematon Jeikkausvoittaja</li>
+				</ul>
+			</div>
+			<br/>
+
+			<div id="contentti">
+				<br/>
+				<div id="content" class="content">{% block content %}{% endblock %}</div>
+			</div>
+			<br/>
+		</div>	
+		<div id="footer" class="footer">{% block footer %}&copy; 2009-2013 Jeikkaus Team{% endblock %}</div>	
+		
+	</body>
+</html>

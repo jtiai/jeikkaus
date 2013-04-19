@@ -1,0 +1,16 @@
+{% extends "jeikkaus/base.html" %}
+{% load i18n %}
+{% block content %}
+Details for match {{ match }}
+<div class='textarea'>
+<table summary="guesses">
+	<tr><th scope="col">User</th><th scope="col">Guess</th><th scope="col">Points</th></tr>
+	{% for guess in guesses %}
+	<tr>
+		
+	</tr>
+	{% endfor %}
+</table>
+</div>
+{% endblock %}
+

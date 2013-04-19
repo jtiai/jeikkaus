@@ -1,0 +1,12 @@
+{% extends "jeikkaus/base.html" %}
+{% load i18n %}
+{% block content %}
+<div id="login" class="login">
+<form action="" method="post">{% csrf_token %}<br>
+{{ form }}
+<p class="submit">
+<input type="submit" value="{% trans "Log in" %}" />
+</p>
+</form>
+</div>
+{% endblock %}
