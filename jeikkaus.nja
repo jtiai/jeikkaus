@@ -1,0 +1,7 @@
+{
+  "venv": "/home/jtiai/.virtualenvs/jeikkaus-dev/bin/python", 
+  "project-type": "Import from sources", 
+  "name": "jeikkaus", 
+  "license": "New BSD License", 
+  "description": ""
+}
