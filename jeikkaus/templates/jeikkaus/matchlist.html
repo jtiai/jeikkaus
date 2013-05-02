@@ -9,14 +9,14 @@
 		<td>{{ match.title }}</td>
 		<td>
 			{% if match.is_open %}
-			 {{ g.closing_time|date:"d.m.Y H:i" }}
+			 {{ match.closing_time|date:"d.m.Y H:i" }}
 			{% else %}
 			 {{ match.score }}
 			{% endif %}
 		</td>
 		<td>
 			{% if match.is_open %}
-			<a href="{% url "guessmatch" match.id %}">{{ match.get_guess_for_user|default_if_none:"x - x" }}</a>
+			<a href="{% url "guessmatch" match.id %}">{{ match.get_guess_for_user|default_if_none:"_ - _" }}</a>
 			{% else %}
 			{{ match.get_guess_for_user|default_if_none:"x - x" }}
 			{% endif %}
