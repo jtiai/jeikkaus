@@ -11,6 +11,7 @@ TIE = 0
 def winner(self):
     """Returns winner of the match or guess
     1 = home, 0 = equal, -1 = visitor"""
+
     if self.home_score > self.away_score:
         return HOME
     elif self.home_score < self.away_score:
