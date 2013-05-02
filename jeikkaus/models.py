@@ -94,9 +94,7 @@ class Guess(models.Model):
 
         pts = 0
 
-        if self.match.is_open or
-            self.home_score is None or
-            self.away_score is None:
+        if self.match.is_open or self.home_score is None or self.away_score is None:
             return 0
 
         if self.home_score == self.match.home_score:
