@@ -39,7 +39,7 @@ class Match(models.Model):
 
     @property
     def score(self):
-        if self.home_score and self.away_score:
+        if self.home_score is None and self.away_score is None:
             return u'(%s - %s)' % (self.home_score, self.away_score)
         else:
             return u''
