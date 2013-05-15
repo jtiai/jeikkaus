@@ -47,7 +47,7 @@ background: #CCCCCC;
 border: 2px outset #888684;
 width:145px;
 font-weight:bold;
-} 
+}
 
 .textarea {
 background-color: #2B2E34;
@@ -213,3 +213,34 @@ height:199px;
 width:764px;
 }
 
+.match {
+    min-width: 12em;
+    }
+
+.result {
+    min-width: 5em;
+}
+
+.evenrow {
+    background-color: #2B2E34;
+    }
+
+.oddrow {
+    background-color: #444444;
+    }
+
+.points {
+    min-width: 1.5em;
+    }
+
+.playercol {
+    min-width: 10em;
+    }
+
+.center-text {
+    text-align: center;
+    }
+
+.right-text {
+    text-align: center;
+    }
