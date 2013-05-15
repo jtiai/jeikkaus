@@ -5,26 +5,26 @@
 <table>
 	<thead>
 		<tr>
-		<td>&nbsp;</td><td>&nbsp;</td>	
+		<td class="match">&nbsp;</td><td class="result">&nbsp;</td>	
             {% for user, points in scoreboard.users %}
-            <th>{{ user.first_name }} {{ user.last_name }}</th><td>&nbsp;</td>
+            <th colspan="2" class="playercol">{{ user.first_name }} {{ user.last_name }}</th>
             {% endfor %}
 		</tr>
 		<tr>
 			<td>{% trans "Match" %}</td>
 			<td>{% trans "Result" %}</td>
-            {% for user in scoreboard.users %}
-            <td>&nbsp;</td><td>&nbsp;</td>
+            {% for user, points in scoreboard.users %}
+            <td>&nbsp;</td><td class="right-text">{{ points }}</td>
             {% endfor %}
 		</tr>
 	</thead>
 	<tbody>
         {% for match in scoreboard.matches %}
-		<tr>
+		<tr class="{% cycle "evenrow" "oddrow" %}">
             <th>{{ match.0.title }}</th>
             <th>{{ match.0.score }}</th>
             {% for g in match.1 %}
-            <td>{{ g }}</td><td>{{ g.points }}</td>
+            <td class="center-text">{{ g }}</td><td class="right-text points">{{ g.points }}</td>
 			{% endfor %}			
 		</tr>
         {% endfor %}		
@@ -33,7 +33,7 @@
 		<td>{% trans "Total" %}</td><td>&nbsp;</td>
 		{% for user, points in scoreboard.users %}
 		<td>&nbsp;</td><td>{{ points }}</td>
-		{% endfor %} 
+		{% endfor %}
 	</tfoot>
 </table>
 </div>
